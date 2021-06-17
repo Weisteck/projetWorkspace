@@ -1,0 +1,13 @@
+{
+  "name": "projetworkspace",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [ "back", "front"],
+  "scripts": {
+    "dev:back": "yarn workspaces run develop",
+    "dev2:back": "yarn workspace back develop",
+    "dev:front": "yarn workspace front serve"
+  }
+}
