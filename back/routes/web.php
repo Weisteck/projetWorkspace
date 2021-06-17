@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ViewController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,5 +17,11 @@ use App\Http\Controllers\ViewController;
 //     return view('welcome');
 // });
 
-Route::any('/{any}', [ViewController::class, 'app'])
-    ->where('any','^(?!api).*$');
+// use App\Http\Controllers\ViewController;
+// Route::any('/{any}', [ViewController::class, 'app'])
+//     ->where('any','^(?!api).*$');
+
+
+Route::fallback(function() {
+    return view('index');
+});
